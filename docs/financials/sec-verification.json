@@ -1,0 +1,1690 @@
+{
+  "schemaVersion": 1,
+  "companies": [
+    {
+      "ticker": "DVLT",
+      "capturedAt": "2026-10-10T12:12:01.338602+00:00",
+      "methodology": [
+        "All values are raw USD integers directly copied from SEC Company Facts, not millions or thousands. Filed statement tables have a thousands display scale; the USD values were verified against SEC extracted XBRL facts with decimals=-3.",
+        "The quarterly view selects Apr 1\u2013Jun 30 single-quarter duration facts, not Jan 1\u2013Jun 30 six-month/YTD facts. Balance-sheet facts are instants on Jun 30 of each comparison year, not annual-prior comparisons.",
+        "The annual view selects Jan 1\u2013Dec 31 full-year duration facts, with Dec 31 balance-sheet instants.",
+        "For each metric and exact period, eligible consolidated USD facts on Forms 10-K, 10-K/A, 10-Q or 10-Q/A filed by the as-of date are ordered by filed date then accession. The latest compatible fact is selected. Exact source observations including fy/fp/frame are retained; fy/fp describe the filing and are not used to infer the fact period.",
+        "This latest-fact policy uses Q2 2026 comparative income for Q2 2025, Q2 2025 filings for Jun 30 2025 balances, FY2025 10-K income for both annual years, Q2 2026 comparative balances for Dec 31 2025, and FY2025 10-K comparative balances for Dec 31 2024.",
+        "All selected Dec 31 2025 balance-sheet facts additionally match the FY2025 annual report exactly. No relevant amended 10-K/10-Q appears in SEC submissions, and no conflicting values occur among Company Facts observations for these eight metrics and exact selected periods. This is not a blanket assertion that the issuer has never restated other periods or concepts.",
+        "Every selected observation was independently matched to the same accession\u2019s official extracted XBRL: issuer CIK 0001682149, exact duration/instant, USD unit, no segment/scenario, same concept and value. Rounded narrative duplicates at lower precision were excluded from verification.",
+        "Cash means precisely us-gaap:CashAndCashEquivalentsAtCarryingValue. No restricted-cash-inclusive concept, investments, Bitcoin or other crypto assets are substituted.",
+        "Net income/loss uses us-gaap:NetIncomeLoss, labeled net loss in these financial statements; it does not substitute loss attributable to common stockholders after preferred dividends.",
+        "Revenue uses us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax. us-gaap:Revenues independently agrees for all four selected duration periods.",
+        "Values are reported consolidated amounts, not pro forma or acquisition-adjusted results. Missing or ambiguous eligible observations must be null, never zero or estimated. No values are missing in these two views.",
+        "Latest quarter means latest completed quarter with an available SEC 10-Q, not the newest calendar quarter merely ended. The latest available 10-Q report period in submissions is 2026-06-30."
+      ],
+      "verificationSummary": {
+        "selectedValues": 32,
+        "valuesMatchedAgainstOfficialXbrl": 32,
+        "additionalAnnualBalanceCrossChecks": 5,
+        "missingValues": 0,
+        "conflictingSelectedPeriodValues": 0,
+        "allValuesAreRawUSD": true
+      },
+      "metrics": [
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "revenue",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-23",
+                "factId": "f-124",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 6717000,
+                "start": "2026-04-01",
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              6717000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-23",
+                "factId": "f-164",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": -26456000,
+                "start": "2026-04-01",
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              -26456000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "netIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-23",
+                "factId": "f-274",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": -88025000,
+                "start": "2026-04-01",
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              -88025000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "cashAndCashEquivalents",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-3",
+                "factId": "f-30",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 1400000,
+                "start": null,
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              1400000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-3",
+                "factId": "f-52",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 134961000,
+                "start": null,
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              134961000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-3",
+                "factId": "f-80",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 27266000,
+                "start": null,
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              27266000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-3",
+                "factId": "f-68",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 276642000,
+                "start": null,
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              276642000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2026",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-3",
+                "factId": "f-86",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 30748000,
+                "start": null,
+                "end": "2026-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              30748000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "revenue",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-24",
+                "factId": "f-125",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 1735000,
+                "start": "2025-04-01",
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 2,
+            "distinctPreviouslyReportedValues": [
+              1735000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-24",
+                "factId": "f-165",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": -12459000,
+                "start": "2025-04-01",
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 2,
+            "distinctPreviouslyReportedValues": [
+              -12459000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "netIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-24",
+                "factId": "f-319",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": -37116000,
+                "start": "2025-04-01",
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              -37116000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "cashAndCashEquivalents",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_6_30_2025_Br36VSgWM0-7j-1-xt7Guw",
+                "factId": "Tc_JASzmndtfESTbhwpt0Yi5g_5_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 662000,
+                "start": null,
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              662000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_6_30_2025_Br36VSgWM0-7j-1-xt7Guw",
+                "factId": "Tc_1hx5S0ytC0qnDWQtOLOTaA_10_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 3796000,
+                "start": null,
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              3796000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_6_30_2025_Br36VSgWM0-7j-1-xt7Guw",
+                "factId": "Tc_ZraxueqLF0yh2X0suM481w_23_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 8117000,
+                "start": null,
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              8117000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_6_30_2025_Br36VSgWM0-7j-1-xt7Guw",
+                "factId": "Tc_qwsnzM30YUmxaf33NozJZw_16_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 120690000,
+                "start": null,
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              120690000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q2 2025",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000141057825001857/dvlt-20250630x10q.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_6_30_2025_Br36VSgWM0-7j-1-xt7Guw",
+                "factId": "Tc_K0zATNROD0WQREnw4ig10A_29_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 46621000,
+                "start": null,
+                "end": "2025-06-30",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              46621000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "revenue",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2025_To_12_31_2025_xRnI1r2rx0GKCaOLvqYrwQ",
+                "factId": "Tc_I2IsTSfHLU6rbOTybkrtHw_7_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 39089000,
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              39089000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2025_To_12_31_2025_xRnI1r2rx0GKCaOLvqYrwQ",
+                "factId": "Tc_wmYFxAKfPUytnSvEwAuv2Q_20_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": -32475000,
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              -32475000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "netIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2025_To_12_31_2025_xRnI1r2rx0GKCaOLvqYrwQ",
+                "factId": "Tc_NVFjJmQOMEq7pwQfz7ajkg_30_3",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": -78994000,
+                "start": "2025-01-01",
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              -78994000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "cashAndCashEquivalents",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-4",
+                "factId": "f-31",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 2004000,
+                "start": null,
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              2004000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-4",
+                "factId": "f-53",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 142873000,
+                "start": null,
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              142873000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-4",
+                "factId": "f-81",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 26881000,
+                "start": null,
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              26881000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-4",
+                "factId": "f-69",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 274704000,
+                "start": null,
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              274704000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000162828026058013/dvlt-20260630.htm",
+            "matches": [
+              {
+                "contextRef": "c-4",
+                "factId": "f-87",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2026",
+                "rawValue": 36730000,
+                "start": null,
+                "end": "2025-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 3,
+            "distinctPreviouslyReportedValues": [
+              36730000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "revenue",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2024_To_12_31_2024_noBOjr1Ic0WfAA6juzBJvg",
+                "factId": "Tc_Rfp9-nsnL0uIb2zVJbYmYQ_7_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 2674000,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 1,
+            "distinctPreviouslyReportedValues": [
+              2674000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2024_To_12_31_2024_noBOjr1Ic0WfAA6juzBJvg",
+                "factId": "Tc_qz-nP482R0a-KbJEXgh3LQ_20_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": -21138000,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 2,
+            "distinctPreviouslyReportedValues": [
+              -21138000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "netIncome",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "Duration_1_1_2024_To_12_31_2024_noBOjr1Ic0WfAA6juzBJvg",
+                "factId": "Tc_gWQ8FfTvPkebHcyCR7D5gw_30_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": -51409000,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 2,
+            "distinctPreviouslyReportedValues": [
+              -51409000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "cashAndCashEquivalents",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_12_31_2024_LwowMPgZPkiwf7WD8xPuOQ",
+                "factId": "Tc_728zZbrxIkiWi_WHOgJJlw_5_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 3330000,
+                "start": null,
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 5,
+            "distinctPreviouslyReportedValues": [
+              3330000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_12_31_2024_LwowMPgZPkiwf7WD8xPuOQ",
+                "factId": "Tc_iSRXPoWUzkaw3LqWsiQHoQ_14_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 6439000,
+                "start": null,
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 5,
+            "distinctPreviouslyReportedValues": [
+              6439000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_12_31_2024_LwowMPgZPkiwf7WD8xPuOQ",
+                "factId": "Tc_7Zm3kco0s0q68H8JkincgQ_31_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 4113000,
+                "start": null,
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 5,
+            "distinctPreviouslyReportedValues": [
+              4113000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_12_31_2024_LwowMPgZPkiwf7WD8xPuOQ",
+                "factId": "Tc__m1XhqyrHEOQDNt9owBLjQ_22_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 100625000,
+                "start": null,
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 5,
+            "distinctPreviouslyReportedValues": [
+              100625000
+            ],
+            "changedAcrossFilings": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "exact-match",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k_htm.xml",
+            "filingUrl": "https://www.sec.gov/Archives/edgar/data/1682149/000110465926031280/dvlt-20251231x10k.htm",
+            "matches": [
+              {
+                "contextRef": "As_Of_12_31_2024_LwowMPgZPkiwf7WD8xPuOQ",
+                "factId": "Tc_aF01-znO10OtssMsBkYDkQ_36_6",
+                "decimals": "-3",
+                "taxonomyNamespace": "http://fasb.org/us-gaap/2025",
+                "rawValue": 14899000,
+                "start": null,
+                "end": "2024-12-31",
+                "unit": "USD"
+              }
+            ]
+          },
+          "selection": {
+            "matchingCompanyFactsObservations": 5,
+            "distinctPreviouslyReportedValues": [
+              14899000
+            ],
+            "changedAcrossFilings": false
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "capturedAt": "2026-10-10T12:11:24.430023Z",
+      "methodology": [
+        "Only Apple Inc., CIK 0000320193, verified against the SEC submissions ticker mapping, is used. All values are raw USD from the official SEC Company Facts JSON, with independent matching against official filing Inline XBRL.",
+        "Income metrics use exact three-month (91-day) quarterly durations or 364-day annual durations. Year-to-date nine-month facts are excluded; quarter values are reported directly, not derived by subtraction.",
+        "Balance-sheet metrics are point-in-time instants, at each corresponding quarter or annual end. Quarterly prior-year balances come from the Q3 FY2025 10-Q, not the prior fiscal year-end balance column in the FY2026 10-Q.",
+        "Choose the latest compatible 10-K, 10-Q or amended filing observation on or before the as-of date for the exact concept, USD unit, start and end. Repeated prior-period facts use the later filing. A later comparative is not automatically evidence of a restatement.",
+        "FY2025 annual balances use the FY2026 Q3 filing as the latest compatible source; FY2025 annual income and FY2024 comparatives use FY2025 Form 10-K. Q3 FY2025 income uses the FY2026 Q3 filing; Q3 FY2025 balances use the FY2025 Q3 filing.",
+        "No differing values were found across compatible observations for these 32 selected period/metric cells. No 10-K/A or 10-Q/A for these target periods was present in the downloaded recent submissions list. This is a bounded check, not a blanket assurance about every historical restatement.",
+        "Company Facts fy and fp describe the filing reporting context, and frame uses calendar alignment; these are preserved in rawFact but are not used as the fiscal period labels. Exact filing durations establish the fiscal labels.",
+        "Cash is exclusively us-gaap:CashAndCashEquivalentsAtCarryingValue; it excludes marketable securities and broader cash-plus-restricted-cash concepts. Total liabilities is us-gaap:Liabilities, not debt or liabilities-and-equity.",
+        "Missing or unverified metric-period values are null. No value interpolation, zero-filling or substitution from other companies is performed.",
+        "This is a captured snapshot as of the observed fetch time, not a live API connection. Latest means latest available reported period in the downloaded SEC submissions and facts, not every elapsed calendar/fiscal period."
+      ],
+      "verificationSummary": {
+        "metricPeriodCells": 32,
+        "verifiedCells": 32,
+        "missingCells": 0,
+        "changedValuesAcrossCompatibleFilings": [],
+        "targetAmendments": []
+      },
+      "metrics": [
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "revenue",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-56",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              109417000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-88",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              35695000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "netIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-104",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              29789000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "cashAndEquivalents",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-164",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              39544000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-176",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              149818000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-200",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              149326000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-188",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              383266000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2026",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-208",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              275746000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "revenue",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-19",
+            "factId": "f-57",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              94036000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-19",
+            "factId": "f-89",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              28202000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "netIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-19",
+            "factId": "f-105",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              23434000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "cashAndEquivalents",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-167",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              36269000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-179",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              122491000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-201",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              141120000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-189",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              331495000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "quarterly",
+          "period": "Q3 FY2025",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-209",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              265665000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "revenue",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-1",
+            "factId": "f-78",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              416161000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-1",
+            "factId": "f-102",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              133050000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "netIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-1",
+            "factId": "f-114",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 1,
+            "distinctValues": [
+              112010000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "cashAndEquivalents",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-165",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 4,
+            "distinctValues": [
+              35934000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-177",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 4,
+            "distinctValues": [
+              147957000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-201",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 4,
+            "distinctValues": [
+              165631000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-189",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 4,
+            "distinctValues": [
+              359241000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2025",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-22",
+            "factId": "f-209",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 4,
+            "distinctValues": [
+              285508000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "revenue",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-79",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              391035000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "operatingIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-103",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              123216000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "netIncome",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-18",
+            "factId": "f-115",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 2,
+            "distinctValues": [
+              93736000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "cashAndEquivalents",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-160",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 5,
+            "distinctValues": [
+              29943000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "currentAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-172",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 5,
+            "distinctValues": [
+              152987000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "currentLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-194",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 5,
+            "distinctValues": [
+              176392000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "totalAssets",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-182",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 5,
+            "distinctValues": [
+              364980000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        },
+        {
+          "view": "annual",
+          "period": "FY2024",
+          "metric": "totalLiabilities",
+          "verification": {
+            "status": "matched_company_facts_to_filing_inline_xbrl",
+            "contextRef": "c-21",
+            "factId": "f-202",
+            "unitRef": "usd",
+            "filingDisplayScale": 6,
+            "consolidatedWithoutDimensions": true
+          },
+          "selection": {
+            "policy": "latest_filed_compatible_fact_for_exact_concept_unit_and_period",
+            "compatibleObservationCount": 5,
+            "distinctValues": [
+              308030000000
+            ],
+            "valuesChangedAcrossCompatibleFilings": false,
+            "amendedFormSelected": false
+          }
+        }
+      ]
+    }
+  ]
+}

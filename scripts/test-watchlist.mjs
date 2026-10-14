@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const target=path.resolve('.sites-runtime/watchlist-tests');fs.mkdirSync(target,{recursive:true});fs.writeFileSync(path.join(target,'package.json'),'{"type":"commonjs"}');
+fs.writeFileSync(path.join(target,'watchlist.js'),ts.transpileModule(fs.readFileSync('lib/watchlist.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText);
+const {normalizeTicker,validTicker,parseTickerInput,parseWatchlist,nextWatchBatch,mergeWatchNews,WATCHLIST_LIMIT,WATCHLIST_BATCH_SIZE,WATCHLIST_ITEMS_PER_TICKER}=createRequire(path.join(target,'test.cjs'))('./watchlist.js');
+assert.equal(normalizeTicker(' $dvlt '),'DVLT');assert(validTicker('BRK.B'));assert(!validTicker('AAPL,MSFT'));assert(!validTicker('<script>'));
+assert.deepEqual(parseWatchlist([' dvlt ','DVLT','$aapl',null,3,'!bad']),['DVLT','AAPL']);assert.deepEqual(parseWatchlist({ticker:'AAPL'}),[]);assert.equal(parseWatchlist(Array.from({length:60},(_,i)=>'A'+i)).length,WATCHLIST_LIMIT);
+assert.equal(WATCHLIST_LIMIT,50);
+assert.deepEqual(parseTickerInput(' $dvlt, AAPL, dvlt, brk.b, , MSFT\nTSLA'),['DVLT','AAPL','BRK.B','MSFT','TSLA']);
+assert.throws(()=>parseTickerInput(' , '));assert.throws(()=>parseTickerInput('AAPL, <script>'));
+assert.throws(()=>parseTickerInput('AAPL MSFT'));assert.throws(()=>parseTickerInput(Array.from({length:51},(_,i)=>'A'+i).join(',')));
+const symbols=Array.from({length:50},(_,i)=>'T'+i),feeds={};let checked=[];
+assert.equal(WATCHLIST_BATCH_SIZE*WATCHLIST_ITEMS_PER_TICKER,20);
+for(let i=0;i<13;i++){
+  const batch=nextWatchBatch(symbols,feeds);assert(batch.length<=4);
+  assert(batch.every(t=>!checked.includes(t)),'Unseen tickers must be loaded before older pages');
+  checked.push(...batch);batch.forEach(t=>feeds[t]={nextPage:2,hasMore:true,error:''});
+}
+assert.deepEqual(checked,symbols);
+assert.deepEqual(nextWatchBatch(symbols,feeds),symbols.slice(0,4));
+symbols.slice(0,4).forEach(t=>feeds[t].nextPage=3);
+assert.deepEqual(nextWatchBatch(symbols,feeds),symbols.slice(4,8));
+feeds.T4.error='Unavailable';feeds.T5.hasMore=false;
+assert.deepEqual(nextWatchBatch(symbols,feeds),symbols.slice(6,10));
+assert.deepEqual(nextWatchBatch(symbols,feeds,true),['T4']);
+Object.values(feeds).forEach(f=>f.hasMore=false);assert.deepEqual(nextWatchBatch(symbols,feeds),[]);
+const older={ticker:'DVLT',date:'2026-01-01',headline:'Older',formType:'News',url:null},newer={...older,ticker:'AAPL',date:'2026-02-01',headline:'Newer'};
+assert.deepEqual(mergeWatchNews([older,newer,older]),[newer,older]);assert.equal(mergeWatchNews([older,{...older,ticker:'AAPL'}]).length,2);
+assert(fs.readFileSync('app/watchlist.tsx','utf8').includes("fetch('/api/news?'"));
+assert(fs.readFileSync('app/page.tsx','utf8').includes("window.addEventListener('popstate'"));
+console.log('PASS: ticker normalization/validation/deduplication, 50-ticker bound, feed ordering/deduplication, comma-separated input, bounded 20-item batches, fair pagination, shared endpoint, and history wiring.');
