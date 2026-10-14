@@ -11,11 +11,14 @@ Passed:
 - Existing account watchlist tests: 60 backend checks and 10 component-state checks, including isolation and limits.
 - Fresh local database migrations using `npm run setup`.
 - Production Vinext build through the Sites build helper.
+- Fresh retained-template setup and private Sites deployment, using a separate project with no copied API credentials.
+- Hosted D1 migrations: the new database contains `api_response_cache` and `watchlists`.
+- Private test-site audience verified as owner-only.
+- GitHub upload verified by comparing all 198 file contents and executable modes with the sanitized source.
 - Source scan for common credential patterns, embedded private keys, private deployment URLs, and Sites project identifiers; no matches were found in the distributable files.
 
 Not yet verified:
 
-- Fresh private Sites registration/deployment from this template.
 - Real AskEdgar API connection using a recipient-owned key.
 - Browser/mobile behavior of a newly deployed recipient copy.
 
