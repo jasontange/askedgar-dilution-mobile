@@ -3,6 +3,7 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import Watchlist from './watchlist';
 import {normalizeTicker,validTicker} from '../lib/watchlist';
 import InstrumentCards from './instrument-cards';
+import DilutionChanges from './dilution-changes';
 import CompanyTables from './company-tables';
 import CompanyOverview, {RiskRatings,ManagementCommentary} from './company-overview';
 import CompanyNews from './company-news';
@@ -37,6 +38,7 @@ export default function Home(){
       {data.ratingsFetchedAt&&<p className="footnote">Ratings retrieved {new Date(data.ratingsFetchedAt).toLocaleString()} · Cached for up to 1 hour.</p>}
       <ManagementCommentary commentary={data.overview?.mgmt_commentary}/>
       {data.warnings.map((w,i)=><div className="notice" key={i}>{w}</div>)}
+      <DilutionChanges key={data.ticker} rows={data.rows} complete={data.complete}/>
       <div className="dilution-controls section-target" id="dilution" tabIndex={-1}><div><h2>Dilution</h2><p>{showOutOfPlay?'Showing all instruments':'Showing in-play instruments'} · {visibleRows.length}{data.complete?'':' loaded'}</p></div><button type="button" aria-pressed={showOutOfPlay} onClick={()=>setShowOutOfPlay(value=>!value)}>{showOutOfPlay?'Hide out-of-play':'Show out-of-play'}</button></div>
       {data.dilutionFetchedAt&&<p className="footnote">Dilution data retrieved {new Date(data.dilutionFetchedAt).toLocaleString()} · Cached for up to 1 hour.</p>}
       <div className="price-comparison"><div><strong>Instrument prices</strong><span>Compared with the screener price above</span></div>{data.stockPriceMessage?<p>{data.stockPriceMessage}</p>:<><div className="price-legend"><span><i className="green-dot"/>≤ 1× stock price</span><span><i className="yellow-dot"/>&gt; 1× to &lt; 4×</span><span><i className="red-dot"/>≥ 4×</span></div><p>Variable Rate: yellow above the stock price, green at or below. No color when nothing remains.</p></>}</div>

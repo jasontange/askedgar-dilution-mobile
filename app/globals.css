@@ -173,3 +173,21 @@ main,.panel,.search-card,.search,.company-identity,.company-quote,.news-content,
 
 .chart-overlay-controls .chart-vwap-toggle[aria-pressed=true]{color:#9c5b08;background:#fff7e9;border-color:#dec297}.chart-vwap-value{font-weight:600}.chart-vwap-value::before{content:'';display:inline-block;width:12px;height:2px;background:currentColor;vertical-align:middle;margin-right:5px}
 .chart-dilution-card .summary-floor-label{margin-top:5px}.chart-dilution-card .instrument-summary.has-floor-price .summary-stat{align-self:start}
+
+/* Dated dilution history shared by the feed and instrument cards. */
+.dilution-change-feed,.instrument-changes{list-style:none;margin:0;padding:0}
+.dilution-change-feed>li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding:16px 24px;border-top:1px solid #e5e7eb;line-height:1.65;font-size:13px}
+.dilution-change-feed time,.instrument-changes time{font-weight:700;color:#374151;white-space:nowrap;font-variant-numeric:tabular-nums}
+.dilution-change-feed p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.change-instrument{display:block;margin-top:5px;font-size:12px;color:#6b7280;overflow-wrap:anywhere}
+.changes-toggle{background:none;color:#263cd9;border:0;border-radius:4px;padding:6px 0;min-height:32px;font-size:12px;line-height:1.5;text-align:left;cursor:pointer}
+.changes-toggle:focus-visible{outline:2px solid #263cd9;outline-offset:3px}
+.changes-toggle:hover{text-decoration:underline;text-underline-offset:3px}
+.feed-toggle{margin:8px 24px 12px;min-height:40px}
+.instrument-details{min-width:0;text-align:left;font-weight:400;line-height:1.65}
+.instrument-changes>li{margin:0 0 9px;white-space:pre-wrap;overflow-wrap:anywhere}
+.instrument-original-terms{margin:10px 0 0;color:#6b7280;white-space:pre-wrap;overflow-wrap:anywhere}
+.instrument-original-terms:first-child{margin-top:0}
+.terms-preview{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.changes-incomplete{padding:0 24px;color:#866012;font-size:12px}
+@media(max-width:600px){.dilution-change-feed>li{grid-template-columns:minmax(0,1fr);gap:5px;padding:15px 18px}.dilution-change-feed time{font-size:12px}.feed-toggle{margin-left:18px}.changes-toggle{min-height:44px}.changes-incomplete{padding:0 18px}}

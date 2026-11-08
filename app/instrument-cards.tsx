@@ -1,4 +1,5 @@
 import React from 'react';
+import {InstrumentDetails} from './dilution-changes';
 import {finiteNumber,priceSignal} from '../lib/dilution-price';
 type Row = Record<string, unknown>;
 function value(v: unknown): string {
@@ -42,11 +43,11 @@ export default function InstrumentCards({title,subtitle,rows,kind,stockPrice}:{t
       ['Floor Price',number(r.floor_price,true),floorSignal],
       ...(warrant ? [['Total Warrants',number(r.warrants_amount)],['Pre-Funded Cost',number(prefundedCost,true),signalFor(prefundedCost)]] as [string,string,ReturnType<typeof priceSignal>?][] : [['Amount Remaining',number(r.convertible_debt_remaining,true)],['Total Amount',number(r.offering_amount,true)]] as [string,string,ReturnType<typeof priceSignal>?][]),
       ['Owners',value(r.owners)],['Bank',value(r.bank)],
-      ...(visibleProtection ? [['Price Protection',visibleProtection]] as [string,string,ReturnType<typeof priceSignal>?][] : []),['Details',value(r.pp_clause)],
+      ...(visibleProtection ? [['Price Protection',visibleProtection]] as [string,string,ReturnType<typeof priceSignal>?][] : []),['Details & changes',value(r.pp_clause)],
       ...(warrant ? [['Exercisable Date',date(r.exercisable_date)],['Expiration Date',date(r.expiration_date)]] as [string,string,ReturnType<typeof priceSignal>?][] : [['Convertible Date',date(r.convertible_date)],['Maturity Date',date(r.maturity_date)]] as [string,string,ReturnType<typeof priceSignal>?][]),
       ['Filed Date',date(r.filed_at)]
     ];
-    const body = (mobile=false)=><div className="instrument-body"><dl>{fields.map(([label,v,fieldSignal],fieldIndex)=>mobile&&(fieldIndex<2||(label==='Floor Price'&&floorPrice!==null)||label==='Price Protection')?null:<div className={'instrument-field'+(label==='Details'?' clause-field':'')+(fieldIndex<2?' key-instrument-field':'')} key={label}><dt>{label}</dt><dd className={fieldSignal?'instrument-price '+fieldSignal.className:undefined} title={fieldSignal?.description}>{v}{fieldSignal&&<span className="sr-only"> — {fieldSignal.description}</span>}</dd></div>)}</dl>{link&&<div className="card-source"><a href={link} target="_blank" rel="noreferrer">View filing ↗</a></div>}</div>;
+    const body = (mobile=false)=><div className="instrument-body"><dl>{fields.map(([label,v,fieldSignal],fieldIndex)=>mobile&&(fieldIndex<2||(label==='Floor Price'&&floorPrice!==null)||label==='Price Protection')?null:<div className={'instrument-field'+(label==='Details & changes'?' clause-field':'')+(fieldIndex<2?' key-instrument-field':'')} key={label}><dt>{label}</dt><dd className={fieldSignal?'instrument-price '+fieldSignal.className:undefined} title={fieldSignal?.description}>{label==='Details & changes'?<InstrumentDetails value={r.pp_clause}/>:v}{fieldSignal&&<span className="sr-only"> — {fieldSignal.description}</span>}</dd></div>)}</dl>{link&&<div className="card-source"><a href={link} target="_blank" rel="noreferrer">View filing ↗</a></div>}</div>;
     return <React.Fragment key={`${name}-${i}`}>
       <article className={'instrument-card instrument-card-desktop '+signal.className}>
         <div className="instrument-desktop-heading"><h3 className="instrument-name">{name}</h3>{value(r.registered)!=='—'&&<span className="instrument-registration">{value(r.registered)}</span>}</div>
